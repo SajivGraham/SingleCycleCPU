@@ -4,7 +4,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity PROGRAM_COUNTER is
     Port ( 
-			  LOAD         		: in  STD_LOGIC;
+	   LOAD               : in  STD_LOGIC;
            PC_COUNT_ENABLE    : in  STD_LOGIC;
            PC_CLOCK           : in  STD_LOGIC;
            RESET              : in  STD_LOGIC;
