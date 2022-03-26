@@ -5,28 +5,28 @@ use IEEE.NUMERIC_STD.ALL;
 entity ALU is
 	Port(
 		  INPUT1,INPUT2     : in  STD_LOGIC_VECTOR(15 downto 0);
-		  OUTPUT			     : out STD_LOGIC_VECTOR(15 downto 0);
+		  OUTPUT	    : out STD_LOGIC_VECTOR(15 downto 0);
 		  STATUS_OUTPUT     : out STD_LOGIC_VECTOR(8 downto 0);
-	  	  ALU_OPCODE		  : in  STD_LOGIC_VECTOR(4 downto 0)
+	  	  ALU_OPCODE	    : in  STD_LOGIC_VECTOR(4 downto 0)
 		  );
 end ALU;
 
 architecture Behavioral of ALU is
 
-signal 			  STATUS 					  : STD_LOGIC_VECTOR(8 downto 0);
-signal           RESULT 	   			  : STD_LOGIC_VECTOR(15 downto 0);
-signal 			  RESULT_MULT				  : STD_LOGIC_VECTOR(31 downto 0);
+signal 		 STATUS 				: STD_LOGIC_VECTOR(8 downto 0);
+signal           RESULT 	   			: STD_LOGIC_VECTOR(15 downto 0);
+signal 		 RESULT_MULT				: STD_LOGIC_VECTOR(31 downto 0);
 
-signal   		  OVERFLOW_VAR 			  : STD_LOGIC := '0';
-signal           NEGATIVE_VAR			     : STD_LOGIC := '0';
-signal   	     COMPARE_VAR			     : STD_LOGIC := '0';
-signal           GREATER_THAN_VAR		  : STD_LOGIC := '0';
-signal           LESS_THAN_VAR			  : STD_LOGIC := '0';
-signal           LOGICAL_AND_VAR			  : STD_LOGIC := '0';
-signal           LOGICAL_OR_VAR			  : STD_LOGIC := '0';
-signal           LOGICAL_XOR_VAR			  : STD_LOGIC := '0';
+signal   	 OVERFLOW_VAR 			  	: STD_LOGIC := '0';
+signal           NEGATIVE_VAR			     	: STD_LOGIC := '0';
+signal   	 COMPARE_VAR			     	: STD_LOGIC := '0';
+signal           GREATER_THAN_VAR		 	: STD_LOGIC := '0';
+signal           LESS_THAN_VAR			  	: STD_LOGIC := '0';
+signal           LOGICAL_AND_VAR			: STD_LOGIC := '0';
+signal           LOGICAL_OR_VAR			  	: STD_LOGIC := '0';
+signal           LOGICAL_XOR_VAR			: STD_LOGIC := '0';
 
-signal			  TWOS                    : STD_LOGIC_VECTOR(15 downto 0);
+signal		 TWOS                    		: STD_LOGIC_VECTOR(15 downto 0);
 begin
 
 process (INPUT1, INPUT2, ALU_OPCODE) is
@@ -247,7 +247,7 @@ begin
 				RESULT_MULT <= X"00000000";
 				
 			when others  => RESULT      <= X"0000";
-								 RESULT_MULT <= X"00000000";
+					RESULT_MULT <= X"00000000";
 			end case;
 
 end process;
