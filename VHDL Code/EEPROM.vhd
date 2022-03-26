@@ -4,12 +4,12 @@ use IEEE.NUMERIC_STD.ALL;
 
 
 entity EEPROM is
-    Port ( EEPROM_CLOCK : in  STD_LOGIC;
-			  EEPROM_ADDRESS      : in  STD_LOGIC_VECTOR (7 downto 0);
+    Port ( EEPROM_CLOCK        : in  STD_LOGIC;
+	   EEPROM_ADDRESS      : in  STD_LOGIC_VECTOR (7 downto 0);
            EEPROM_INPUT        : in  STD_LOGIC_VECTOR (15 downto 0);
            EEPROM_OUTPUT       : out STD_LOGIC_VECTOR (15 downto 0);
            EEPROM_WRITE_ENABLE : in  STD_LOGIC;
-			  EEPROM_READ_ENABLE  : in  STD_LOGIC
+	   EEPROM_READ_ENABLE  : in  STD_LOGIC
 			  );
 end EEPROM;
 
