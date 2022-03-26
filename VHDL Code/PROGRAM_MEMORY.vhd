@@ -5,15 +5,15 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity PROGRAM_MEMORY is
     Port ( 
-			  ADDRESS   : in  STD_LOGIC_VECTOR (7 downto 0);
+	   ADDRESS   : in  STD_LOGIC_VECTOR (7 downto 0);
            PM_OUTPUT : out  STD_LOGIC_VECTOR (30 downto 0)
 			  );
 end PROGRAM_MEMORY;
 
 architecture Behavioral of PROGRAM_MEMORY is
 
-type 		PROG_FILE_TYPE is array(0 to 255) of STD_LOGIC_VECTOR(30 downto 0) ;
-signal PROGRAM_MEMORY_ARRAY : PROG_FILE_TYPE := (others => "1111100000000000000000000000000");
+type 	PROG_FILE_TYPE is array(0 to 255) of STD_LOGIC_VECTOR(30 downto 0) ;
+signal  PROGRAM_MEMORY_ARRAY : PROG_FILE_TYPE := (others => "1111100000000000000000000000000");
 begin
 
 --LED PWM
