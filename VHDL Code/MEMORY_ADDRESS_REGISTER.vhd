@@ -3,11 +3,11 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 entity MEMORY_ADDRESS_REGISTER is
-    Port ( MAR_CLOCK          : in  STD_LOGIC;
-			  MAR_INPUT 			: in  STD_LOGIC_VECTOR (7 downto 0);
-			  MAR_OUTPUT 			: out STD_LOGIC_VECTOR (7 downto 0);
+    Port ( 		  MAR_CLOCK            : in  STD_LOGIC;
+			  MAR_INPUT 	       : in  STD_LOGIC_VECTOR (7 downto 0);
+			  MAR_OUTPUT 	       : out STD_LOGIC_VECTOR (7 downto 0);
 
-			  MAR_READ_ENABLE 	  : in  STD_LOGIC;
+			  MAR_READ_ENABLE      : in  STD_LOGIC;
 			  
 			  MAR_READ_ADDRESS_IN  : in  STD_LOGIC_VECTOR (2 downto 0);
 			  MAR_WRITE_ADDRESS_IN : in  STD_LOGIC_VECTOR (2 downto 0)
