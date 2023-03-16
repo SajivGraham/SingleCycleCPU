@@ -247,7 +247,7 @@ begin
 				RESULT_MULT <= X"00000000";
 				
 			when others  => RESULT      <= X"0000";
-								 RESULT_MULT <= X"00000000";
+				        RESULT_MULT <= X"00000000";
 			end case;
 
 end process;
@@ -255,10 +255,10 @@ end process;
 STATUS_OUTPUT(0) <= OVERFLOW_VAR;
 STATUS_OUTPUT(1) <= NEGATIVE_VAR;
 STATUS_OUTPUT(2) <= '1' when (ALU_OPCODE = "11011")and INPUT1 = INPUT2  else 
-						  '0' when (ALU_OPCODE = "11011")and INPUT1 /= INPUT2 else
-						  '1' when (ALU_OPCODE = "11100")and INPUT1 = INPUT2  else
-						  '0' when (ALU_OPCODE = "11100")and INPUT1 /= INPUT2 else 
-						  '0';
+		    '0' when (ALU_OPCODE = "11011")and INPUT1 /= INPUT2 else
+		    '1' when (ALU_OPCODE = "11100")and INPUT1 = INPUT2  else
+		    '0' when (ALU_OPCODE = "11100")and INPUT1 /= INPUT2 else 
+		    '0';
 STATUS_OUTPUT(3) <= GREATER_THAN_VAR;
 STATUS_OUTPUT(4) <= LESS_THAN_VAR;
 STATUS_OUTPUT(5) <= LOGICAL_AND_VAR;
